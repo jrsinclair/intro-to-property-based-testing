@@ -1,0 +1,9 @@
+const ONE_MINUTE = 60000;
+
+// We rebuild the state using two filter operations. One keeps anything that has a completed date
+// newer than one minute. The other keeps anything that has a completed date older than one minute.
+const moveOldTasksToArchive = ({active, archive}, currentTime) => ({
+    active: active.filter(({completed}) => currentTime - completed < ONE_MINUTE),
+    archive: active.filter(({completed}) => currentTime - completed >= ONE_MINUTE).concat(archive),
+});
+export default moveOldTasksToArchive;
