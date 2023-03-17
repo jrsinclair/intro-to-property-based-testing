@@ -1,6 +1,6 @@
-import {Task, TasksState} from '../types';
+import {Task, TasksState} from '../../types';
 
-import moveOldTasksToArchive from './index.solution';
+import moveOldTasksToArchive from './index';
 
 // Some date constants to make life easier. We're using
 // timestamps rather than date objects to keep the

@@ -1,4 +1,6 @@
-const moveOldTasksToArchive = (tasks: unknown, start: number) => ({
+import {TasksState} from '../../types';
+
+const moveOldTasksToArchive = (tasks: TasksState, start: number) => ({
     active: [
         {
             created: 1636521795000,
