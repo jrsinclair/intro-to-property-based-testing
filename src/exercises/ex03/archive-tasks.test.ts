@@ -13,13 +13,13 @@ type Arbitrary<T> = fc.Arbitrary<T>;
 
 // Create an arbitrary that will generate a task title for us. A task title can be any string. (Or
 // can it?)
-// const titleArb = ??????
+// const titleArb: Arbitrary<string> = ??????
 
 // Create an arbitrary that will generate a task creation date for us. A task creation date is a
 // number representing epoch milliseconds. The number must map to a valid date. You may be
 // be interested to know that we can
 // [transform arbitraries](https://github.com/dubzzz/fast-check/blob/main/packages/fast-check/documentation/Arbitraries.md#array)
-// const createdDateArb = ??????
+// const createdDateArb: Arbitrary<number> = ??????
 
 // We eventually want to create an arbitrary that will provide compelted dates for us. But we have
 // a problem. A completed date should always be ≥ creation date. So, we don't know what a valid
@@ -30,10 +30,10 @@ type Arbitrary<T> = fc.Arbitrary<T>;
 // our task is completed. We can then add that number to our creation date to get a completion date.
 //
 // Create an arbitrary to represent a number of milliseconds that's always greater than zero.
-// const offsetArb = ?????
+// const offsetArb: Arbitrary<number> = ?????
 
-// Create an arbitray to represent the start date.
-// const startDate = ????
+// Create an arbitray to represent the start date. Remember, again, this is a timestamp, not a Date.
+// const startDate: Arbitrary<number> = ????
 
 //
 // Compound data generators
@@ -46,8 +46,9 @@ type Arbitrary<T> = fc.Arbitrary<T>;
 // Create an arbitrary to represent our Todo app state. The todo app state has two properties:
 // 1. A list of current tasks; and
 // 2. A list of archived tasks.
-// const stateArb: Arbitrary<TaskState>
+// const stateArb: Arbitrary<TasksState> = ????
 
+//
 // Property test
 // ------------------------------------------------------------------------------------------------
 
