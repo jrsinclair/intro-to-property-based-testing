@@ -53,7 +53,7 @@ type Arbitrary<T> = fc.Arbitrary<T>;
 // ------------------------------------------------------------------------------------------------
 
 describe('moveOldTasksToArchive()', () => {
-    test(`GIVEN ANY valid task state and date
+    test(`GIVEN ANY valid tasks state and date
         WHEN we run moveOldTasksToArchive()
         THEN the total number of tasks SHOULD ALWAYS stay the same`, () => {
         // Create your property test here. It should check that the  total number of tasks does not
